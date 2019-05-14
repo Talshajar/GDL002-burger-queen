@@ -5,8 +5,7 @@ class Dashboard extends Component {
     render () {
         return (
            <div >
-            <button className="btn btn-primary btn-lg">ORDER</button>
-            <button className="btn btn-secondary btn-lg">KITCHEN</button>
+          <h1>hola estas en Home</h1>
           <Navigation />
           </div>
         )
