@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
-import { Breakfast } from "./Json/dataBreak.json";
+import { Lunch } from "./Json/dataLunch.json";
 import Counter from '../Components/menu';
 
 
-class BreakfastItem extends Component{
+class LunchItem  extends Component{
 
 constructor(){
   super();
   this.state = {
-    Breakfast
+    Lunch
   }
 }  
 
     render(){
-      const Breakfast = this.state.Breakfast.map((breakfast, i) => {
+      const Lunch = this.state.Lunch.map((lunch, i) => {
         return (
           
   <div className="col-sm-6">
     <div className="card">
       <div className="card-body">
-        <h5 className="card-title">{breakfast.item}</h5>
-        <p className="card-text">{breakfast.price}</p>
+        <h5 className="card-title">{lunch.item}</h5>
+        <p className="card-text">{lunch.price}</p>
         <button className="btn btn-primary"> <Counter /> </button>
       </div>
     </div>
@@ -31,10 +31,10 @@ constructor(){
       
         return(
           <div className="row">
-            {Breakfast}
+            {Lunch}
             </div>
         );
     }
 
 }
-export default BreakfastItem;
+export default LunchItem ;
