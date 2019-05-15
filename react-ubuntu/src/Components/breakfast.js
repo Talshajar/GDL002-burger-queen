@@ -1,7 +1,5 @@
-  
 import React, { Component } from 'react';
-
-import { Breakfast } from './Json/breakfast.json';
+import Breakfast from "./Json/dataBreak.json";
 
 
 class Food extends Component{
