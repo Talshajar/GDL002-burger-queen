@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Navigation from "./navigation";
 
-class Dashboard extends Component {
+class Home extends Component {
     render () {
         return (
            <div >
@@ -12,4 +12,4 @@ class Dashboard extends Component {
     }
 }
 
-export default Dashboard;
+export default Home;

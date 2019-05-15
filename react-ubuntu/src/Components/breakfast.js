@@ -1,7 +1,7 @@
   
 import React, { Component } from 'react';
 
-import { Breakfast } from './Components/breakjson';
+import { Breakfast } from './Json/breakfast.json';
 
 
 class Food extends Component{
@@ -20,8 +20,8 @@ constructor(){
   <div className="col-sm-6">
     <div className="card">
       <div className="card-body">
-        <h5 className="card-title">{breakfast.title}</h5>
-        <p className="card-text">{breakfast.Precio}</p>
+        <h5 className="card-title">{breakfast.item}</h5>
+        <p className="card-text">{breakfast.price}</p>
         <button className="btn btn-primary">Pedir</button>
       </div>
     </div>

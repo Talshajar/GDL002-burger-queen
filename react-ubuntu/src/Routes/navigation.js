@@ -7,10 +7,10 @@ const Nav = () => {
         <React.Fragment>
             <ul className="containerNav">
                 <li>
-                <Link to="/dashboard">Home</Link>
+                <Link to="/home">Home</Link>
                 </li>
                 <li>
-                <Link to="/command">Order</Link>
+                <Link to="/order">Order</Link>
                 </li>
                 <li>
                 <Link to="/kitchen">Kitchen</Link>

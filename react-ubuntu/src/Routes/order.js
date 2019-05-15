@@ -1,9 +1,9 @@
 import React from "react";
 import Navigation from "./navigation";
-import Counter from './menu';
-import Food from "./breakfast";
+import Counter from '../Components/menu';
+import Food from "../Components/breakfast";
 
-const Command = () => (
+const Order = () => (
  <div>
      <h1>hola estas en Order</h1>
 
@@ -13,4 +13,4 @@ const Command = () => (
  </div>   
 );
 
-export default Command;
+export default Order;
