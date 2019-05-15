@@ -3,13 +3,3 @@ body {
     width: 1200px;
     height: auto;
 };
-
-#containerNav{
-    flex: wrap;
-};
-
-li {
-    color: aliceblue;
-    text-decoration: none;
-    font-size: large;
-}

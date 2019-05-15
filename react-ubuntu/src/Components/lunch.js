@@ -1,40 +1,49 @@
 import React, { Component } from 'react';
 import { Lunch } from "./Json/dataLunch.json";
-import Counter from '../Components/menu';
+
 
 
 class LunchItem  extends Component{
 
-constructor(){
-  super();
-  this.state = {
-    Lunch
-  }
-}  
-
-    render(){
-      const Lunch = this.state.Lunch.map((lunch, i) => {
-        return (
-          
-  <div className="col-sm-6">
-    <div className="card">
-      <div className="card-body">
-        <h5 className="card-title">{lunch.item}</h5>
-        <p className="card-text">{lunch.price}</p>
-        <button className="btn btn-primary"> <Counter /> </button>
-      </div>
-    </div>
-  </div>
-
-        )
-      })
-      
-        return(
-          <div className="row">
-            {Lunch}
-            </div>
-        );
+  constructor(props){
+    super(props);
+    this.state = {
+       orders:[]
     }
+     this.submit = this.submit.bind(this);
+}
 
+
+
+submit(nameItem, price){
+
+  const orders = this.state.orders;
+
+  const order = {
+    item: nameItem,
+    price: price
+  }
+
+  orders.push(order);
+  console.log(order);
+  
+  }
+    render(){
+        return (
+          <div>
+          {Lunch.map((lunch, i) =>
+           <div key={i}>
+             <h3>{lunch.item}</h3>
+             <h5>{lunch.price}</h5>
+             <button className="btn btn-primary" type="submit" 
+             onClick={()=>{this.submit(lunch.item, lunch.price);}}>Add+</button>
+           </div>
+
+
+           )}
+             </div>
+
+)
+}
 }
 export default LunchItem ;
