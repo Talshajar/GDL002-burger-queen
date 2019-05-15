@@ -1,0 +1,54 @@
+{
+    "Lunch":[
+        {
+            "item":"Hamburguesa simple",
+            "price":"$10.00",
+            "value":10
+        },
+        {
+            "item":"Hamburguesa doble",
+            "Price":"$15.00",
+            "value":15
+        },
+        {
+            "item":"Queso Extra",
+            "Price":"$1.00",
+            "value":1
+        },
+        {
+            "item":"Huevo",
+            "Price":"$1.00",
+            "value":1
+        },
+        {
+            "item":"Papas fritas",
+            "Price":"$5.00",
+            "value":5
+        },
+        {
+            "item":"Aros de cebolla",
+            "Price":"$5.00",
+            "value":5
+        },
+        {
+            "item":"Agua 500ml",
+            "Price":"$5.00",
+            "value":5
+        },
+        {
+            "item":"Agua 750ml",
+            "Price":"$8.00",
+            "value":8
+        },
+        {
+            "item":"Bebida/gaseosa 500ml",
+            "Price":"$8.00",
+            "value":8
+        },
+        {
+            "item":"Bebida/gaseosa 750ml",
+            "Price":"$12.00",
+            "value":12
+        }
+    ]
+}

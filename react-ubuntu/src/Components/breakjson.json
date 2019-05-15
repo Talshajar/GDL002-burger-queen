@@ -1,0 +1,24 @@
+{
+    "Breakfast":[
+        {
+            "item":"Café Americano",
+            "price":"$5.00",
+            "value":5
+        },
+        {
+            "item":"Café Con Leche",
+            "price":"$7.00",
+            "value":7
+        },
+        {
+            "item":"Sandwich de jamón y queso",
+            "price":"$10.00",
+            "value":10
+        },
+        {
+            "item":"Jugo de frutas natural",
+            "price":"$7.00",
+            "value":7
+        }
+    ]
+}

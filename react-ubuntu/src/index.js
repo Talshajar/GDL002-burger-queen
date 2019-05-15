@@ -11,7 +11,7 @@ import Navigation from './Components/navigation';
 const App = () => (
     <BrowserRouter>
       <React.Fragment>
-            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/dashboard" component={Dashboard} /> 
             <Route path="/kitchen" component={Kitchen} />
             <Route path="/command" component={Command} />
             <Route path="/navigation" component={Navigation} />
