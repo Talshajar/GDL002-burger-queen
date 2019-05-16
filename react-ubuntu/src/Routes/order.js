@@ -6,8 +6,6 @@ import Counter from '../Components/menu';
 
 const Order = () => (
  <div>
-     <h1>hola estas en Order</h1>
-
      <Navigation />
      <p>Desayuno</p>
      <BreakfastItem/>
@@ -15,6 +13,7 @@ const Order = () => (
      <LunchItem />
      <Counter />
      
+     <h1>hola estas en Order</h1>   
  </div>   
 );
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Breakfast } from "./Json/dataBreak.json";
+import { Card, Button , CardContent, CardActions , Typography } from '@material-ui/core';
 
 
 class BreakfastItem extends Component {
@@ -26,23 +27,28 @@ submit(nameItem, price){
   console.log(order);
   
   }
-
+  
+  
     render(){
 
+
+
+      
         return (
-          <div>
-          {Breakfast.map((breakfast, i) =>
-           <div key={i}>
-             <h3>{breakfast.item}</h3>
-             <h5>{breakfast.price}</h5>
-             <button className="btn btn-primary" type="submit" 
-             onClick={()=>{this.submit(breakfast.item, breakfast.price);}}>Add+</button>
-           </div>
-
-
-           )}
-             </div>
-
+          <Card>
+              {Breakfast.map((breakfast, index) =>
+              <CardContent key={index}>
+                  <Typography variant="h5" component="h2" >{breakfast.item}</Typography>
+                  <Typography color="textSecondary">{breakfast.price}</Typography>
+                    <CardActions> 
+                       <Button size="small" type="submit" onClick={()=>{this.submit(breakfast.item,breakfast.price);}}>Add+</Button>
+                    </CardActions>
+              </CardContent>
+ )}
+              
+          
+         
+          </Card>
 )
 }
 }
