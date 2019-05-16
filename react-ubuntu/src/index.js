@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter , Route } from "react-router-dom";
+import { BrowserRouter , Route, Switch } from "react-router-dom";
 import "../src/index.css";
 import Home from './Routes/home';
 import Order from './Routes/order';
@@ -10,19 +10,16 @@ import Navigation from './Routes/navigation';
 
 const App = () => (
     <BrowserRouter>
-      <React.Fragment>
+      <Switch>
             <Route path="/home" component={Home} /> 
             <Route path="/kitchen" component={Kitchen} />
             <Route path="/order" component={Order} />
-            <Route path="/navigation" component={Navigation} />
-      </React.Fragment>
+            <Route path="/" component={Navigation} />
+      </Switch>
     </BrowserRouter>
 );
-
 
 ReactDOM.render(
   <App />,
   document.getElementById("root")
 );
- 
-

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
@@ -6,10 +6,11 @@ import MenuItem from '@material-ui/core/MenuItem';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state/index';
 
 function MenuPopupState() {
+  // spread operator ...
   return (
     <PopupState variant="popover" popupId="demo-popup-menu">
       {popupState => (
-        <React.Fragment>
+        <Fragment>
           <Button variant="contained" {...bindTrigger(popupState)}>
             Open Menu
           </Button>
@@ -24,7 +25,7 @@ function MenuPopupState() {
                <Link to="/kitchen">Kitchen</Link>
                  </MenuItem>
           </Menu>
-        </React.Fragment>
+        </Fragment>
       )}
     </PopupState>
   );
