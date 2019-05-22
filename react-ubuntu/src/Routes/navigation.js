@@ -16,13 +16,13 @@ function MenuPopupState() {
           </Button>
           <Menu {...bindMenu(popupState)}>
             <MenuItem onClick={popupState.close}>
-               <Link to="/home">Home</Link>
-                 </MenuItem>
-            <MenuItem onClick={popupState.close}>
                <Link to="/order">Order</Link>
                  </MenuItem>
             <MenuItem onClick={popupState.close}>
                <Link to="/kitchen">Kitchen</Link>
+                 </MenuItem>
+            <MenuItem onClick={popupState.close}>
+               <Link to="/navigation">Home</Link>
                  </MenuItem>
           </Menu>
         </Fragment>

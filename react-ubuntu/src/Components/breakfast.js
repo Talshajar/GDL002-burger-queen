@@ -1,17 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Breakfast } from "./Json/dataBreak.json";
 import { Card, Button , CardContent, CardActions , Typography } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
+import CommandBreakfast from '../Components/CommandsBreakFast';
 
 class BreakfastItem extends Component {
   constructor(props){
       super(props);
       this.state = {
-         Breakfast,
          commands:[]
       }
        this.submit = this.submit.bind(this);
 }
+
 submit(nameItem, price){
   const order = {
     item: nameItem,
@@ -21,13 +22,13 @@ submit(nameItem, price){
 
  this.setState({
     commands:[...this.state.commands, order]
-  }, ()=> console.log(this.state.commands)
-  )
+  })
 }
 
   
     render(){ 
         return (
+          <Fragment>
           <Card>
               {Breakfast.map((breakfast, index) =>
               <CardContent key={index}>
@@ -38,7 +39,14 @@ submit(nameItem, price){
                     </CardActions>
               </CardContent>
  )}  
+
           </Card>
+          <Card>
+          <CommandBreakfast orden={this.state.commands} />
+          </Card>
+        </Fragment>
+
+
 )
 }
 }
