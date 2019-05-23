@@ -3,6 +3,7 @@ import { Breakfast } from "./Json/dataBreak.json";
 import { Card, Button , CardContent, CardActions , Typography } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import CommandBreakfast from '../Components/CommandsBreakFast';
+import TotalPrice from '../Components/TotalPrice'
 
 class BreakfastItem extends Component {
   constructor(props){
@@ -16,13 +17,17 @@ class BreakfastItem extends Component {
 submit(nameItem, price){
   const order = {
     item: nameItem,
-    price: price
+    price: price,
   }
+
+
+  
 // setState y spread operator
 
  this.setState({
     commands:[...this.state.commands, order]
   })
+  
 }
 
   
@@ -39,10 +44,10 @@ submit(nameItem, price){
                     </CardActions>
               </CardContent>
  )}  
-
           </Card>
           <Card>
           <CommandBreakfast orden={this.state.commands} />
+          <TotalPrice total={this.state.commands} />
           </Card>
         </Fragment>
 
