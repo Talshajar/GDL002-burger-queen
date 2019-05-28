@@ -5,7 +5,7 @@ import "../src/index.css";
 import Order from './Routes/order';
 import Kitchen from './Routes/kitchen';
 import Home from './Routes/home';
-
+import * as serviceWorker from './serviceWorker';
 
 
 const App = () => (
@@ -23,3 +23,5 @@ ReactDOM.render(
   <App />,
   document.getElementById("root")
 );
+
+serviceWorker.unregister();
