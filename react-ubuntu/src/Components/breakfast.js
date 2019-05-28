@@ -1,9 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { Breakfast } from "./Json/dataBreak.json";
 import { Card, Button , CardContent, CardActions , Typography } from '@material-ui/core';
-import AddIcon from '@material-ui/icons/Add';
 import CommandBreakfast from '../Components/CommandsBreakFast';
-import TotalPrice from '../Components/TotalPrice'
+
 
 class BreakfastItem extends Component {
   constructor(props){
@@ -29,25 +28,30 @@ submit(nameItem, price){
   })
   
 }
-
+removeItem = (index) => {
+  const newCommand = [...this.state.commands.slice(0, index), ...this.state.commands.slice(index, -1)];
+  this.setState({ commands: newCommand });
+}
   
     render(){ 
+ 
+      
         return (
+          
           <Fragment>
           <Card>
               {Breakfast.map((breakfast, index) =>
-              <CardContent key={index}>
+              <CardContent item xs={12} sm={6} key={index}>
                   <Typography variant="h5" component="h2" >{breakfast.item}</Typography>
-                  <Typography color="textSecondary"> {breakfast.price}</Typography>
+                  <Typography color="textSecondary"> ${breakfast.price}.00</Typography>
                     <CardActions> 
-                       <Button size="small" type="submit" onClick={()=>{this.submit(breakfast.item,breakfast.price);}}> <AddIcon /> </Button>
+                       <Button variant="contained" color="primary" type="submit" onClick={()=>{this.submit(breakfast.item,breakfast.price);}}> AÑADIR </Button>
                     </CardActions>
               </CardContent>
  )}  
           </Card>
           <Card>
-          <CommandBreakfast orden={this.state.commands} />
-          <TotalPrice total={this.state.commands} />
+          <CommandBreakfast orden={this.state.commands} removeItem={this.removeItem}/>
           </Card>
         </Fragment>
 

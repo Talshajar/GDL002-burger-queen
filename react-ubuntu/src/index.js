@@ -4,7 +4,8 @@ import { BrowserRouter , Route, Switch } from "react-router-dom";
 import "../src/index.css";
 import Order from './Routes/order';
 import Kitchen from './Routes/kitchen';
-import Navigation from './Routes/navigation';
+import Home from './Routes/home';
+
 
 
 const App = () => (
@@ -12,7 +13,7 @@ const App = () => (
       <Switch>
             <Route path="/kitchen" component={Kitchen} />
             <Route path="/order" component={Order} />
-            <Route path="/" component={Navigation} />
+            <Route path="/" component={Home} />
             
       </Switch>
     </BrowserRouter>
