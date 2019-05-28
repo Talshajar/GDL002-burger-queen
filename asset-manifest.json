@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rocio-burger-queen/static/css/main.78ee6941.chunk.css",
+    "main.js": "/rocio-burger-queen/static/js/main.791d0556.chunk.js",
+    "main.js.map": "/rocio-burger-queen/static/js/main.791d0556.chunk.js.map",
+    "runtime~main.js": "/rocio-burger-queen/static/js/runtime~main.0eef7e55.js",
+    "runtime~main.js.map": "/rocio-burger-queen/static/js/runtime~main.0eef7e55.js.map",
+    "static/js/2.53933551.chunk.js": "/rocio-burger-queen/static/js/2.53933551.chunk.js",
+    "static/js/2.53933551.chunk.js.map": "/rocio-burger-queen/static/js/2.53933551.chunk.js.map",
+    "index.html": "/rocio-burger-queen/index.html",
+    "precache-manifest.d20359775099714dcb86a9350f8a185a.js": "/rocio-burger-queen/precache-manifest.d20359775099714dcb86a9350f8a185a.js",
+    "service-worker.js": "/rocio-burger-queen/service-worker.js",
+    "static/css/main.78ee6941.chunk.css.map": "/rocio-burger-queen/static/css/main.78ee6941.chunk.css.map"
+  }
+}
